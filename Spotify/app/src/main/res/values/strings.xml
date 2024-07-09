@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Spotify</string>
+    <string name="hint1">Çalma listesinde bul</string>
+    <string name="text1">Sırala</string>
+    <string name="plName">Deli öfkem, kara sevdam</string>
+    <string name="Aciklama">geceleri uyuduğumu mu zannediyorsun Memati</string>
+    <string name="plOlusturan">Anonim⚡︎</string>
+    <string name="time">14 sa. 11 dk.</string>
+    <string name="songName">Fikrimin İnce Gülü</string>
+    <string name="singer">Dedublüman, Çağrı Çelik︎</string>
+    <string name="songName2">Bir Sevmek Bin  Defa Ölmek Demekmiş</string>
+    <string name="singer2">Barış Akarsu</string>
+    <string name="songName2_2">Islak Islak</string>
+    <string name="songName3">Dönence</string>
+    <string name="singer3">Barış Manço</string>
+    <string name="songName4">Yokluğunda</string>
+    <string name="singer4">Leyla the Band</string>
+    <string name="songName5">Odalarda Işıksızım</string>
+    <string name="singer5">Kayahan</string>
+    <string name="playSong">ence ● Barış Manço</string>
+    <string name="bt">QCY-T13 ANC_Sariye</string>
+    <string name="library">Kitaplığın</string>
+    <string name="library1">Çalma listeleri</string>
+    <string name="library2">Albümler</string>
+    <string name="library3">Sanatçılar</string>
+    <string name="library4">İndirilenler</string>
+    <string name="last">Son Çalınanlar</string>
+    <string name="plName2">Geceleri neler dinlediğini biliyoruz</string>
+    <string name="pl1">Çalma listesi ● 416 Şarkı</string>
+    <string name="pl2">Çalma listesi ● Sariye</string>
+    <string name="pl3">Çalma listesi ● Spotify</string>
+    <string name="pl4">Çalma listesi ● Zeynep</string>
+    <string name="pl5">Çalma listesi ● Kübra</string>
+</resources>

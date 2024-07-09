@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Instangram</string>
+    <string name="textTop">Senin için</string>
+    <string name="name1">Sariye</string>
+    <string name="name2">Zeynep</string>
+    <string name="name3">Zeliha</string>
+    <string name="name4">Patya</string>
+    <string name="name5">Kübra</string>
+    <string name="exampleName">zeliha_vural</string>
+    <string name="exampleVoice">zeliha_vural ● Orijinal ses</string>
+    <string name="example"><b>sariye_yaman ve 56.555 diğer kişi</b> beğendi </string>
+    <string name="text">Bir sevmek bin defa Ölmek demekmiş.</string>
+    <string name="hint">1.180 yorumun tümünü gör</string>
+    <string name="date">1 gün önce</string>
+
+
+</resources>

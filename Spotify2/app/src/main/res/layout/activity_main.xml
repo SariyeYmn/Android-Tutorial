@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/profile1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.13" />
+
+    <TextView
+        android:id="@+id/textLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="@string/library"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+    <ImageView
+        android:id="@+id/searchBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@id/textLibrary"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@id/addBtn"
+        app:layout_constraintWidth_max="25dp"
+        app:layout_constraintWidth_percent="0.08" />
+
+    <ImageView
+        android:id="@+id/addBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/textLibrary"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="25dp"
+        app:layout_constraintWidth_percent="0.08" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:padding="7dp"
+                android:text="@string/library1"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:padding="7dp"
+                android:text="@string/library2"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:padding="7dp"
+                android:text="@string/library3"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:padding="7dp"
+                android:text="@string/library4"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:padding="7dp"
+                android:text="@string/library4"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/constraint3"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScroll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_swap_vert_24"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="25dp"
+                app:layout_constraintWidth_percent="0.04" />
+
+            <TextView
+                android:id="@+id/lastPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/last"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/img"
+                app:layout_constraintStart_toEndOf="@id/img"
+                app:layout_constraintTop_toTopOf="@id/img" />
+
+            <ImageView
+                android:id="@+id/viewBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/outline_grid_view_24"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img"
+                app:layout_constraintWidth_max="25dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <ImageView
+                android:id="@+id/likeSong"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/dedubluman"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown"
+                app:layout_constraintStart_toEndOf="@id/likeSong"
+                app:layout_constraintTop_toTopOf="@id/likeSong" />
+
+            <ImageView
+                android:id="@+id/imgDown"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/likeSong"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName"
+                app:layout_constraintTop_toBottomOf="@id/textPlName"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown"
+                app:layout_constraintTop_toTopOf="@id/imgDown" />
+
+            <ImageView
+                android:id="@+id/pl2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris_manco"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/likeSong"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown2"
+                app:layout_constraintStart_toEndOf="@id/pl2"
+                app:layout_constraintTop_toTopOf="@id/pl2" />
+
+            <ImageView
+                android:id="@+id/imgDown2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl2"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName2"
+                app:layout_constraintTop_toBottomOf="@id/textPlName2"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl4"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown2"
+                app:layout_constraintTop_toTopOf="@id/imgDown2" />
+
+            <ImageView
+                android:id="@+id/pl3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl2"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown3"
+                app:layout_constraintStart_toEndOf="@id/pl3"
+                app:layout_constraintTop_toTopOf="@id/pl3" />
+
+            <ImageView
+                android:id="@+id/imgDown3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl3"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName3"
+                app:layout_constraintTop_toBottomOf="@id/textPlName3"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown3"
+                app:layout_constraintTop_toTopOf="@id/imgDown3" />
+
+            <ImageView
+                android:id="@+id/pl4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/leyla"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl3"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown4"
+                app:layout_constraintStart_toEndOf="@id/pl4"
+                app:layout_constraintTop_toTopOf="@id/pl4" />
+
+            <ImageView
+                android:id="@+id/imgDown4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl4"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName4"
+                app:layout_constraintTop_toBottomOf="@id/textPlName4"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown4"
+                app:layout_constraintTop_toTopOf="@id/imgDown4" />
+
+            <ImageView
+                android:id="@+id/pl5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris2"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl4"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown5"
+                app:layout_constraintStart_toEndOf="@id/pl5"
+                app:layout_constraintTop_toTopOf="@id/pl5" />
+
+            <ImageView
+                android:id="@+id/imgDown5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl5"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName5"
+                app:layout_constraintTop_toBottomOf="@id/textPlName5"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown5"
+                app:layout_constraintTop_toTopOf="@id/imgDown5" />
+
+            <ImageView
+                android:id="@+id/pl6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/dedubluman"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl5"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown6"
+                app:layout_constraintStart_toEndOf="@id/pl6"
+                app:layout_constraintTop_toTopOf="@id/pl6" />
+
+            <ImageView
+                android:id="@+id/imgDown6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl6"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName6"
+                app:layout_constraintTop_toBottomOf="@id/textPlName6"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown6"
+                app:layout_constraintTop_toTopOf="@id/imgDown6" />
+
+            <ImageView
+                android:id="@+id/pl7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris_manco"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl6"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown7"
+                app:layout_constraintStart_toEndOf="@id/pl7"
+                app:layout_constraintTop_toTopOf="@id/pl7" />
+
+            <ImageView
+                android:id="@+id/imgDown7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl7"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName7"
+                app:layout_constraintTop_toBottomOf="@id/textPlName7"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown7"
+                app:layout_constraintTop_toTopOf="@id/imgDown7" />
+
+            <ImageView
+                android:id="@+id/pl8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris2"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl7"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown8"
+                app:layout_constraintStart_toEndOf="@id/pl8"
+                app:layout_constraintTop_toTopOf="@id/pl8" />
+
+            <ImageView
+                android:id="@+id/imgDown8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl8"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName8"
+                app:layout_constraintTop_toBottomOf="@id/textPlName8"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown8"
+                app:layout_constraintTop_toTopOf="@id/imgDown8" />
+
+            <ImageView
+                android:id="@+id/pl9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/dedubluman"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl8"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown9"
+                app:layout_constraintStart_toEndOf="@id/pl9"
+                app:layout_constraintTop_toTopOf="@id/pl9" />
+
+            <ImageView
+                android:id="@+id/imgDown9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl9"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName9"
+                app:layout_constraintTop_toBottomOf="@id/textPlName9"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown9"
+                app:layout_constraintTop_toTopOf="@id/imgDown9" />
+
+            <ImageView
+                android:id="@+id/pl10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/dedubluman"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pl9"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlName10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/plName2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/imgDown10"
+                app:layout_constraintStart_toEndOf="@id/pl10"
+                app:layout_constraintTop_toTopOf="@id/pl10" />
+
+            <ImageView
+                android:id="@+id/imgDown10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_arrow_circle_down_24"
+                app:layout_constraintBottom_toBottomOf="@id/pl10"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlName10"
+                app:layout_constraintTop_toBottomOf="@id/textPlName10"
+                app:layout_constraintWidth_max="28dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/plText10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pl3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/imgDown10"
+                app:layout_constraintTop_toTopOf="@id/imgDown10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPlaySong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:backgroundTint="@color/bg2"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/constraint3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgPlaySong"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baris_manco"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="110dp"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/textPlaySong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="@string/playSong"
+                app:layout_constraintBottom_toTopOf="@id/bt"
+                app:layout_constraintStart_toEndOf="@id/imgPlaySong"
+                app:layout_constraintTop_toTopOf="@id/imgPlaySong" />
+
+            <ImageView
+                android:id="@+id/bt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="7dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_bluetooth_24"
+                app:layout_constraintBottom_toBottomOf="@id/imgPlaySong"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/textPlaySong"
+                app:layout_constraintTop_toBottomOf="@id/textPlaySong"
+                app:layout_constraintWidth_max="22dp"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <TextView
+                android:id="@+id/textbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="@string/bt"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/bt"
+                app:layout_constraintStart_toEndOf="@id/bt"
+                app:layout_constraintTop_toTopOf="@id/bt" />
+
+            <ImageView
+                android:id="@+id/headphones"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="7dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_headphones_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@id/add2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="35dp"
+                app:layout_constraintWidth_percent="0.08" />
+
+            <ImageView
+                android:id="@+id/add2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="7dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_add_circle_outline_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@id/pause"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="35dp"
+                app:layout_constraintWidth_percent="0.08" />
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="7dp"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_pause_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="35dp"
+                app:layout_constraintWidth_percent="0.08" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bg3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_max="48dp"
+        app:layout_constraintHeight_percent="0.08">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:src="@drawable/baseline_home_filled_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/imgSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="30dp"
+            app:layout_constraintWidth_percent="0.05" />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:src="@drawable/baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/imgLibrary"
+            app:layout_constraintStart_toEndOf="@id/imgHome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="30dp"
+            app:layout_constraintWidth_percent="0.05" />
+
+        <ImageView
+            android:id="@+id/imgLibrary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:src="@drawable/baseline_menu_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgSearch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="30dp"
+            app:layout_constraintWidth_percent="0.05" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

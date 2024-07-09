@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Weatherapp</string>
+    <string name="Account">Accounts</string>
+    <string name="Password">Password</string>
+    <string name="Pzt">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wd">Wednesday</string>
+    <string name="sunday">Sunday</string>
+    <string name="s1">16°</string>
+    <string name="s2">24°</string>
+    <string name="s3">14°</string>
+    <string name="shen">Shen Zhen</string>
+</resources>
